@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOS</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'css/help.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/sos.css' %}" />
+{#    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>#}
+
+</head>
+
+<body>
+    <div class="buttons_container">
+        <button id="issue" onclick="initMap(true)" name="olopa" value="olopa">olopa</button>
+        <button id="issue" onclick="initMap(true)" name="kito" value="kito">kito</button>
+        <button id="issue" onclick="initMap(true)" name="hostage" value="hostage">hostage</button>
+    </div>
+
+    <div class="contacts_container" id="map">
+
+
+    </div>
+    <div id="con">
+
+    </div>
+
+    <footer class="footer">
+        <p class="rights">All rights reserved Aumarh</p>
+    </footer>
+    <script src="{% static 'js/location.js' %}"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL4ubeilpLyE-i0mgX-f_X1SQrCI1x8ko&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+{#    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>#}
+</body>
+</html>

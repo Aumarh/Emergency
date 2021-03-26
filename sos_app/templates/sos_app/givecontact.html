@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOS</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'css/help.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/sos.css' %}" />
+
+</head>
+<body>
+    <div class="contact">
+
+        {% block content %}
+            <h3>Provide your emergency contact details</h3>
+            <form action="" class="" method="POST">
+                {% csrf_token %}
+                <label for="nickname">Your name</label>
+                <input id="nickname" type="text" name="nickname" required>
+
+                <label for="firstcontact_name">First Emergency Contact</label>
+                <input type="text" name="firstcontact_name" placeholder="their name" required>
+
+
+                <input type="text" name="firstcontact_number" placeholder="their number +234" required>
+
+                <label for="secondcontact_name">Second Emergency Contact</label>
+                <input type="text" name="secondcontact_name" placeholder="their name" required>
+
+
+                <input type="text" name="secondcontact_number" placeholder="their number +234" required>
+
+                <input class="submit" type="submit" value="Submit">
+            </form>
+
+        {% endblock content %}
+
+    </div>
+
+
+
+
+    <footer class="footer">
+        <p class="rights">All rights reserved Aumarh</p>
+    </footer>
+</body>
+</html>
